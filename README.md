@@ -1,3 +1,5 @@
-# Alv language package
+# `alv` language package
 
-A short description of your language package.
+Atom editor support for the [alv][alive] livecoding language.
+
+[alive]: https://alive.s-ol.nu
