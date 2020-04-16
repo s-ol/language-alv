@@ -1,0 +1,6 @@
+'.source.alv':
+  editor:
+    commentStart: '#('
+    commentEnd: ')'
+  autocomplete:
+    extraWordCharacters: '-!*_'

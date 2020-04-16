@@ -1,0 +1,23 @@
+name: 'Alive'
+scopeName: 'source.alv'
+type: 'tree-sitter'
+parser: 'tree-sitter-alv'
+fileTypes: [ 'alv' ]
+
+scopes:
+  comment: 'comment.block'
+
+  num: 'constant.numeric'
+  sym: 'meta.symbol'
+
+  str: 'string.quoted'
+  'str > escape_char': 'constant.character.escape'
+
+  'cell > tag': 'comment.tag'
+  'cell > head > sym': 'entity.name.function'
+
+folds: [ 'comment', 'cell' ]
+
+comments:
+  start: '#('
+  end: ')'

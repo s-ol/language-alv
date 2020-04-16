@@ -1,0 +1,20 @@
+{
+  "name": "language-alv",
+  "version": "0.0.0",
+  "description": "Atom language support for the alv livecoding language.",
+  "keywords": [
+    "language",
+    "grammar",
+    "alv",
+    "alivecoding",
+    "livecoding"
+  ],
+  "repository": "https://github.com/s-ol/language-alv.git",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "dependencies": {
+    "tree-sitter-alv": "0.1.0" 
+  }
+}
