@@ -5,16 +5,16 @@ parser: 'tree-sitter-alv'
 fileTypes: [ 'alv' ]
 
 scopes:
-  comment: 'comment.block'
+  comment: 'comment.block.alv'
 
-  num: 'constant.numeric'
-  sym: 'meta.symbol'
+  num: 'constant.numeric.alv'
+  sym: 'meta.symbol.alv'
 
-  str: 'string.quoted'
-  'str > escape_char': 'constant.character.escape'
+  str: 'string.quoted.alv'
+  'str > escape_char': 'constant.character.escape.alv'
 
-  'cell > tag': 'comment.tag'
-  'cell > head > sym': 'entity.name.function'
+  'cell > tag': 'comment.tag.alv'
+  'cell > head > sym': 'entity.name.function.alv'
 
 folds: [ 'comment', 'cell' ]
 
