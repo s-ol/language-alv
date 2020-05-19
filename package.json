@@ -15,6 +15,6 @@
     "atom": ">=1.0.0 <2.0.0"
   },
   "dependencies": {
-    "tree-sitter-alv": "0.1.1"
+    "tree-sitter-alv": "0.2.0"
   }
 }
