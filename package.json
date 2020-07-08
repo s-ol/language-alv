@@ -16,5 +16,6 @@
   },
   "dependencies": {
     "tree-sitter-alv": "0.2.0"
-  }
+  },
+  "main": "./lib/alv"
 }

@@ -1,0 +1,14 @@
+@import "ui-variables";
+
+atom-text-editor.editor .highlight.alv.event {
+  .region {
+    border-radius: 4px;
+    transition: background-color 150ms;
+  }
+
+  &.active {
+    .region {
+      background: @background-color-selected;
+    }
+  }
+}
