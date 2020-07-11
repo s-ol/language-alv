@@ -12,3 +12,14 @@ atom-text-editor.editor .highlight.alv {
     }
   }
 }
+
+a.alv--tag {
+  border-radius: 4px;
+  color: transparent;
+  transition: background 150ms, color 150ms;
+
+  &.evt.active, &:hover {
+    color: @text-color-subtle;
+    background: @background-color-selected;
+  }
+}
