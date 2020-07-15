@@ -35,7 +35,8 @@ a.alv--tag {
   }
 }
 
-.alv--null {
+.alv--null,
+.alv--color {
   position: absolute;
   top: 0.5em;
   bottom: 0.5em;
@@ -46,6 +47,13 @@ a.alv--tag {
   border-radius: 0.5em;
 }
 
+.alv--color { 
+  top: 0.3em;
+  bottom: 0.3em;
+  border: @border-width solid @text-color-subtle;
+  background-clip: padding-box;
+}
+
 .alv--event,
 .alv--bool {
   margin: auto;
@@ -53,6 +61,7 @@ a.alv--tag {
 
   border: @border-width solid @text-color-subtle;
   border-radius: @border-radius;
+  background-clip: padding-box;
 
   transition: background 150ms;
 
