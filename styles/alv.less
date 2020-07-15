@@ -14,12 +14,73 @@ atom-text-editor.editor .highlight.alv {
 }
 
 a.alv--tag {
-  border-radius: 4px;
-  color: transparent;
-  transition: background 150ms, color 150ms;
+  display: block;
+  position: relative;
 
-  &.evt.active, &:hover {
-    color: @text-color-subtle;
-    background: @background-color-selected;
+  margin-top: ~"calc(var(--editor-line-height) * -1em)";
+
+  color: transparent;
+
+  > div {
+    position: absolute;
+    top: 0;
+    left: -2px;
+    right: 2px;
+    bottom: 0;
+
+    background: @base-background-color;
+  }
+}
+
+.alv--event,
+.alv--bool {
+  margin: auto;
+  width: 1em;
+  height: 1em;
+
+  border: 2px solid @text-color-subtle;
+  border-radius: 50%;
+
+  transition: background 150ms;
+
+  &.active {
+    background: @text-color-subtle;
+  }
+}
+
+.alv--bool {
+  border-radius: 4px;
+}
+
+.alv--bar {
+  position: absolute;
+  top: 0.4em;
+  bottom: 0.4em;
+  width: 100%;
+
+  border: 2px solid @text-color-subtle;
+  border-radius: 4px;
+
+  > div {
+    position: relative;
+    height: 100%;
+
+    background: @text-color-subtle;
+
+    transition: width 50ms;
+  }
+}
+
+.alv--color {
+  .inner {
+    position: absolute;
+    top: 0.2em;
+    bottom: 0.2em;
+    left: -2px;
+    right: 2px;
+
+    background: red;
+    border: 2px solid @text-color-subtle;
+    border-radius: 4px;
   }
 }
