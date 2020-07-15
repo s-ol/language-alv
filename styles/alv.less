@@ -1,8 +1,11 @@
 @import "ui-variables";
 
-atom-text-editor.editor .highlight.alv {
+@border-radius: 0.2em;
+@border-width: 0.1em;
+
+atom-text-editor.editor .highlight.alv.step {
   .region {
-    border-radius: 4px;
+    border-radius: @border-radius;
     transition: background-color 150ms;
   }
 
@@ -24,42 +27,59 @@ a.alv--tag {
   > div {
     position: absolute;
     top: 0;
-    left: -2px;
-    right: 2px;
+    left: -0.1em;
+    right: 0.1em;;
     bottom: 0;
 
-    background: @base-background-color;
+    padding: 0.3em 0 0.3em 0;
   }
+}
+
+.alv--null {
+  position: absolute;
+  top: 0.5em;
+  bottom: 0.5em;
+  left: 0.5em;
+  right: 0.5em;
+
+  background: @background-color-selected;
+  border-radius: 0.5em;
 }
 
 .alv--event,
 .alv--bool {
   margin: auto;
-  width: 1em;
-  height: 1em;
+  width: 0.8em;
 
-  border: 2px solid @text-color-subtle;
-  border-radius: 50%;
+  border: @border-width solid @text-color-subtle;
+  border-radius: @border-radius;
 
   transition: background 150ms;
+
+  &:after {
+    content: '';
+    display: block;
+    padding-bottom: 100%;
+  }
 
   &.active {
     background: @text-color-subtle;
   }
 }
 
-.alv--bool {
-  border-radius: 4px;
+.alv--event {
+  border-radius: 50%;
 }
 
 .alv--bar {
   position: absolute;
-  top: 0.4em;
+  top: 0.5em;
   bottom: 0.4em;
   width: 100%;
+  overflow: hidden;
 
-  border: 2px solid @text-color-subtle;
-  border-radius: 4px;
+  border: @border-width solid @text-color-subtle;
+  border-radius: @border-radius;
 
   > div {
     position: relative;
@@ -68,19 +88,5 @@ a.alv--tag {
     background: @text-color-subtle;
 
     transition: width 50ms;
-  }
-}
-
-.alv--color {
-  .inner {
-    position: absolute;
-    top: 0.2em;
-    bottom: 0.2em;
-    left: -2px;
-    right: 2px;
-
-    background: red;
-    border: 2px solid @text-color-subtle;
-    border-radius: 4px;
   }
 }
