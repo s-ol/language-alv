@@ -3,16 +3,12 @@
 @border-radius: 0.2em;
 @border-width: 0.1em;
 
-atom-text-editor.editor .highlight.alv.step {
-  .region {
-    border-radius: @border-radius;
-    transition: background-color 150ms;
-  }
+.highlight > .alv.step {
+  border-radius: @border-radius;
+  transition: background-color 150ms;
 
   &.active {
-    .region {
-      background: @background-color-selected;
-    }
+    background: @background-color-selected;
   }
 }
 
